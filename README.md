@@ -1,46 +1,50 @@
-[UA] Проста утиліта для швидкого збереження медіафайлів у Telegram Desktop одним кліком.
-[EN] A simple utility for quick media saving in Telegram Desktop with a single click.
+# 🚀 TelegramSaver (Golden Standard)
+
+[UA] Автоматичне збереження медіа з Telegram Desktop одним кліком коліщатка миші.  
+[EN] Auto-save media from Telegram Desktop with a single mouse wheel click.
 
 ---
 
-## 🇺🇦 Українською
+## ⚡ Швидкий старт / Quick Start (UA/EN)
 
-### Що це таке?
-Це маленька програма, яка автоматизує процес збереження фото та відео в Telegram Desktop. Вам більше не потрібно натискати "Зберегти як", обирати папку та закривати перегляд вручну.
+### 🇺🇦 Українською: Як запустити за 10 секунд
+1. Завантажте файли `TelegramSaver.cs` та `install.bat` в одну папку.
+2. Запустіть **`install.bat`** (бажано від імені адміністратора).
+3. **Все!** Програма сама скомпілюється, налаштує автозапуск при старті Windows і почне працювати у фоні.
 
-### Як це працює?
-Програма працює у фоні та реагує на **натискання коліщатка миші (Middle Click)**, коли ви переглядаєте медіа в Telegram:
-1. Ви натискаєте коліщатко на фото/відео.
-2. Програма сама натискає `Ctrl + S`.
-3. Автоматично підтверджує збереження (натискає `Enter`).
-4. Чекає завершення завантаження та сама закриває вікно перегляду (клікає на "хрестик").
-
-### Особливості:
-- **Розумне очікування:** Програма чекає, поки зникне діалогове вікно, перш ніж закрити медіаплеєр.
-- **Точність:** Вираховує координати кнопки закриття відносно розміру вашого вікна.
-- **Безпека:** Працює тільки тоді, коли вікно Telegram активне.
+**Як користуватися:** Відкрийте будь-яке фото чи відео в Telegram Desktop і просто **натисніть на коліщатко миші**. Файл збережеться в "Завантаження", а вікно перегляду закриється автоматично.
 
 ---
 
-## 🇺🇸 English
+### 🇺🇸 English: How to run in 10 seconds
+1. Download `TelegramSaver.cs` and `install.bat` into the same folder.
+2. Run **`install.bat`** (Run as Administrator is recommended).
+3. **Done!** The script will compile the app, add it to Windows Task Scheduler, and start it in the background.
 
-### What is it?
-A lightweight utility designed to automate media saving in Telegram Desktop. It eliminates the need to manually click "Save As," confirm dialogues, and close the media viewer.
-
-### How it works?
-The app runs in the background and triggers a macro when you **click the mouse wheel (Middle Click)** while using Telegram:
-1. You middle-click on a photo or video.
-2. The app triggers the `Ctrl + S` shortcut.
-3. It automatically confirms the save dialogue (hits `Enter`).
-4. It waits for the process to finish and then closes the media viewer by clicking the "X" button.
-
-### Key Features:
-- **Smart Waiting:** The script monitors the save dialogue and only proceeds once the file is ready.
-- **Dynamic Positioning:** Automatically calculates the "Close" button position based on your current window size.
-- **Context Aware:** Only intercepts clicks when the Telegram window is active.
+**How to use:** Open any photo or video in Telegram Desktop and **click the mouse wheel**. The file will be saved to your downloads, and the viewer will close automatically.
 
 ---
 
-## 🛠 Tech Stack
-- **Language:** C#
-- **API:** Win32 API (User32.dll, Kernel32.dll) for mouse/keyboard hooks and window management.
+## 🛠 Можливості / Features
+
+- **Middle Click Save:** Замінює 4 дії (ПКМ -> Зберегти як -> Enter -> Закрити) одним кліком.
+- **Smart Logic:** Програма чекає завершення збереження та сама клікає на "хрестик" (X), підлаштовуючись під розмір вікна.
+- **Autostart:** Автоматичний запуск разом із Windows.
+- **Security:** Код компілюється прямо на вашому ПК — ви бачите, що запускаєте.
+
+---
+
+## 🗑 Видалення / Uninstallation
+
+### 🇺🇦 Українською:
+Якщо програма вам більше не потрібна, просто запустіть файл **`uninstall.bat`**. Він зупинить процес, видалить автозапуск та всі робочі файли програми.
+
+### 🇺🇸 English:
+If you no longer need the app, simply run the **`uninstall.bat`** file. It will stop the process, remove the scheduled task, and delete all app files.
+
+---
+
+## 📝 Системні вимоги / Requirements
+- **OS:** Windows 7, 10, 11
+- **Software:** .NET Framework 4.0+ (вбудовано в систему)
+- **App:** Telegram Desktop
